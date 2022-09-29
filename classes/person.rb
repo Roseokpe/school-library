@@ -14,6 +14,11 @@ class Person < Nameable
     super()
   end
 
+  def rental(rental)
+    @rentals.push(rental)
+    rental.person = self
+  end
+
   def can_use_services?
     if is_of_age? || @parent_permission
       true
