@@ -1,4 +1,9 @@
-
+require './classes/person.rb'
+require './classes/book.rb'
+require './classes/rental.rb'
+require './classes/student.rb'
+require './classes/teacher.rb'
+require './classes/classroom.rb'
 
 class App
     attr_accessor :books_list, :people
