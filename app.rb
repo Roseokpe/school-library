@@ -28,3 +28,14 @@ class App
       @books_list.each_with_index { |book, i| puts "#{i}) Title: '#{book.title}', Author: #{book.author}" }
     end
   end
+
+    # show list all the peoples 
+    def list_all_people
+        if @people.empty?
+          puts 'There are no people in the library'
+        else
+          @people.each_with_index do |person, i|
+            puts "#{i}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+          end
+        end
+      end
