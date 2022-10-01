@@ -118,4 +118,24 @@ class App
         rentals = @rentals.filter { |rental| rental.person.id == person_id }
         puts 'Rentals:'
         rentals.each { |rental| puts "Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}" }
-      end
+    end
+
+       # show all the students
+    def list_all_students
+        if @students.empty?
+        puts 'There are no students in the library'
+        else
+        @students.each { |student| puts "Name: #{student.name}, ID: #{student.id}, Age: #{student.age}" }
+        end
+    end
+
+      # show all the teachers
+
+  def list_all_teachers
+    if @teachers.empty?
+      puts 'There are no teachers in the library'
+    else
+      @teachers.each { |teacher| puts "Name: #{teacher.name}, ID: #{teacher.id}, Age: #{teacher.age}" }
+    end
+  end
+end
